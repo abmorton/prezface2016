@@ -1,6 +1,5 @@
 from app import db
 
-
 class Candidate(db.Model):
 	__tablename__ = 'candidates'
 
@@ -15,15 +14,13 @@ class Candidate(db.Model):
 	# photo = 
 	# word_cloud = 
 
-	def __init__(self, name, state, party, campaign_site, government_site, facebook_site, twitter_site):
+	def __init__(self, name, state, party, campaign_site, facebook_site, twitter_site):
 		self.name = name
 		self.state = state
 		self.party = party
 		self.campaign_site = campaign_site
-		self.government_site = government_site
 		self.facebook_site = facebook_site
 		self.twitter_site = twitter_site
-
 
 	def __repr__(self):
 		return 'id: {}, name: {}, state: {}, party: {}'.format(self.id, self.name, self.state, self.party)

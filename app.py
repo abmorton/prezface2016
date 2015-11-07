@@ -12,14 +12,17 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 
 db = SQLAlchemy(app)
 
-from models import Candidate
+from models import *
 
 #  Views #
 
 @app.route('/')
 def index():
-	title = 'PrezFace2016'
-	return render_template('index.html', title=title)
+	title = 'Prez Candidates for 2016'
+
+	candidates = Candidate.query.all()
+
+	return render_template('index.html', title=title, candidates=candidates)
 
 
 if __name__ == '__main__':

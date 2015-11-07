@@ -14,6 +14,7 @@ class BaseConfig(object):
 	# MAIL_PASSWORD = os.environ['MAIL_PASSWORD']
 	# MAIL_DEFAULT_SENDER = MAIL_USERNAME
 
+
 class DevConfig(BaseConfig):
 	DEBUG = True
 	SQLALCHEMY_DATABASE_URI = 'sqlite:///prezface.db'
@@ -22,4 +23,4 @@ class DevConfig(BaseConfig):
 
 class ProductionConfig(BaseConfig):
 	DEBUG = False
-	# SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+	SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']

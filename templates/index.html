@@ -5,4 +5,17 @@
 <br>
 <p>There's not much going on here yet. Come back soon.</p>
 
+	{% for c in candidates %}
+	<div class="candidate">
+		<h3>{{c.name}} - {{c.state}} - {{c.party}}</h3>
+		<img src="/static/colorjpgs/{{c.id}}.jpg">
+		<ul>
+			<li>Government site: <a href="{{c.government_site}}", target="_blank">{{c.government_site}}</a></li>
+			<li>Campaign site: <a href="{{c.campaign_site}}", target="_blank">{{c.campaign_site}}</a></li>
+			<li>Twitter site: <a href="{{c.twitter_site}}", target="_blank">{{c.twitter_site}}</a></li>
+			<li>Facebook site: <a href="{{c.facebook_site}}", target="_blank">{{c.facebook_site}}</a></li>
+		</ul>
+	</div>
+	{% endfor %}
+
 {% endblock %}

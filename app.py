@@ -18,7 +18,7 @@ from models import *
 
 @app.route('/')
 def index():
-	title = 'Prez Candidates for 2016'
+	title = '2016 U.S. Presidential Candidates'
 
 	candidates = Candidate.query.all()
 
@@ -26,5 +26,5 @@ def index():
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0')
-	# app.run()
+	# app.run(host='0.0.0.0')
+	app.run()

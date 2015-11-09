@@ -3,6 +3,30 @@ from PIL import Image
 import numpy as np
 # import matplotlib.pyplot as plt
 
+# Add any stopwords here.
+STOPWORDS.add('https')
+STOPWORDS.add('u200b')
+STOPWORDS.add('u2019')
+STOPWORDS.add('XL')
+STOPWORDS.add('u2019s')
+STOPWORDS.add('co')
+STOPWORDS.add('Get')
+STOPWORDS.add('u201cbody')
+STOPWORDS.add('AP')
+STOPWORDS.add('u2019re')
+STOPWORDS.add('nhttps')
+STOPWORDS.add('u27a1')
+STOPWORDS.add('u2019t')
+STOPWORDS.add('u2019m')
+STOPWORDS.add('u2013')
+STOPWORDS.add('u2019ve')
+STOPWORDS.add('u201d')
+STOPWORDS.add('u2192')
+STOPWORDS.add('u2014')
+STOPWORDS.add('u2019ll')
+STOPWORDS.add('u2019m')
+STOPWORDS.add('u2026')
+
 inpath = 'static/bw_pngs/'
 outpath = 'static/wordcloud_pngs/'
 
@@ -19,7 +43,7 @@ for c in range(1,19):
 
 # Making block word clouds (not masked).
 	# text = open('static/txt/'+c.id+'.txt', 'r').read()
-	wordcloud = WordCloud(background_color="white", max_font_size=43, max_words=250, width=700, height=450, prefer_horizontal=1.0, stopwords=STOPWORDS)
+	wordcloud = WordCloud(background_color="white", margin=2, max_font_size=48, max_words=200, width=700, height=450, prefer_horizontal=1.0, stopwords=STOPWORDS)
 	wordcloud.generate(text)
 	wordcloud.to_file(outpath+str(c)+'_block_wordcloud.png')
 

@@ -30,29 +30,36 @@ for c in candidates:
 
 	user = api.get_user(c.twitter_name)
 
-	tweet_data = api.user_timeline(screen_name=user.screen_name, count=1, include_rts=False)
-
+	tweet_data = api.user_timeline(screen_name=user.screen_name, count=500, include_rts=False)
 	tweet_data = repr(tweet_data)
+	tweet_data_list = tweet_data.split('Status(')
+	tweet_list_to_write = []
 
-
-	tweet_text_to_end = tweet_data.partition('text=u')[2]
-
-	tweet_text = tweet_text_to_end.partition(', is_quote_status=')[0]
-
-
+		# Nice visual representation in the shell.
 	print "Database ID: {}".format(c.id)
 	print "Twitter ID: {}".format(user.id)
 	print "Twitter name: {}".format(user.screen_name)
 	print "Number of followers: {}".format(user.followers_count)
 	print ''
-	print tweet_text
-	print ''
+
+	for tweet_data in tweet_data_list:
+
+		# tweet_data = repr(tweet_data)
+
+		tweet_text_to_end = tweet_data.partition('text=u')[2]
+		tweet_text = tweet_text_to_end.partition(', is_quote_status=')[0]
+		tweet_list_to_write.append(tweet_text)
+		
+		print tweet_text
+		print ''
+
 	print '- - -'*10
 	print ''
 
-
+# Writing to /static/txt/ into .txt files, which will be used to create wordclouds.
 	tweetfile = open("static/txt/"+str(c.id)+".txt", "wb")
-	tweetfile.write(tweet_text)
+	for item in tweet_list_to_write:
+		tweetfile.write("%s\n" % item)
 	tweetfile.close()
 
 

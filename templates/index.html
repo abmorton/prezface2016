@@ -3,9 +3,11 @@
 
 <h1>{{ title }}</h1>
 
-<img src="/static/wordcloud_pngs/libertybell_constitution_wordcloud.png" class="wordcloud">
+<img src="/static/wordcloud_pngs/libertybell_constitution_wordcloud.png" id="libertybell" class="wordcloud">
 
-<p>The purpose of this project is to build a word cloud for each U.S. Presidential candidate based on the content of their Twitter accounts.</p>
+<p>Word clouds of the 2016 U.S. Presidential candidates based on their past 500 tweets. Colors are random, font size increases with word frequency. Each word cloud contains the 200 most frequently tweeted word by that candidate.</p>
+
+<p>Check out the <a href="https://github.com/abmorton/prezface2016">code</a> at GitHub.</p>
 
 <br>
 
@@ -23,6 +25,8 @@
 		</span>
 		<h5 class="candidate_wordcloud_title"><a href="http://twitter.com/{{c.twitter_name}}", target="_blank">{{c.twitter_name}}</a> word cloud:</h5>
 		<img src="/static/wordcloud_pngs/{{c.id}}_block_wordcloud.png" class="candidate_wordcloud">
+	
+		<hr size=2>
 	</div>
 	{% endfor %}
 

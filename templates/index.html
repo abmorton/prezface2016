@@ -3,17 +3,26 @@
 
 <h1>{{ title }}</h1>
 
+<img src="/static/wordcloud_pngs/libertybell_constitution_wordcloud.png" class="wordcloud">
+
+<p>The purpose of this project is to build a word cloud for each U.S. Presidential candidate based on the content of their Twitter accounts.</p>
+
+<br>
+
 	{% for c in candidates %}
 	<div class="candidate">
-		<h3>{{c.name}} - {{c.state}} - {{c.party}}</h3>
+		<h3 class="candidate_header">{{c.name}} - {{c.state}} - {{c.party}}</h3>
 		<img src="/static/colorjpgs/{{c.id}}.jpg">
-		<img src="/static/wordcloud_pngs/{{c.id}}_wordcloud.png">
+		<span class="candidate_links">
 		<ul>
-			<li>Government site: <a href="{{c.government_site}}", target="_blank">{{c.government_site}}</a></li>
-			<li>Campaign site: <a href="{{c.campaign_site}}", target="_blank">{{c.campaign_site}}</a></li>
+<!-- 			<li>Government site: <a href="{{c.government_site}}", target="_blank">{{c.government_site}}</a></li>
+ -->		<li>Campaign site: <a href="{{c.campaign_site}}", target="_blank">{{c.campaign_site}}</a></li>
 			<li>Twitter site: <a href="http://twitter.com/{{c.twitter_name}}", target="_blank">{{c.twitter_name}}</a></li>
 			<li>Facebook site: <a href="{{c.facebook_site}}", target="_blank">{{c.facebook_site}}</a></li>
 		</ul>
+		</span>
+		<h5 class="candidate_wordcloud_title"><a href="http://twitter.com/{{c.twitter_name}}", target="_blank">{{c.twitter_name}}</a> word cloud:</h5>
+		<img src="/static/wordcloud_pngs/{{c.id}}_block_wordcloud.png" class="candidate_wordcloud">
 	</div>
 	{% endfor %}
 

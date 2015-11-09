@@ -18,9 +18,11 @@ class BaseConfig(object):
 class DevConfig(BaseConfig):
 	DEBUG = True
 	SQLALCHEMY_DATABASE_URI = 'sqlite:///prezface.db'
+	SQLALCHEMY_TRACK_MODIFICATIONS = True
 	# CELERY_BROKER_URL = 'redis://localhost:6379/0'
 	# CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 
 class ProductionConfig(BaseConfig):
 	DEBUG = False
 	SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+	SQLALCHEMY_TRACK_MODIFICATIONS = False

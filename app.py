@@ -20,7 +20,8 @@ from models import *
 def index():
 	title = '2016 U.S. Presidential Candidates'
 
-	candidates = Candidate.query.all()
+	# Ordering by name, alphabetically.
+	candidates = Candidate.query.order_by(Candidate.name).all()
 
 	return render_template('index.html', title=title, candidates=candidates)
 

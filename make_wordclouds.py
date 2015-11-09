@@ -26,6 +26,9 @@ STOPWORDS.add('u2014')
 STOPWORDS.add('u2019ll')
 STOPWORDS.add('u2019m')
 STOPWORDS.add('u2026')
+STOPWORDS.add('Q')
+STOPWORDS.add('t')
+
 
 inpath = 'static/bw_pngs/'
 outpath = 'static/wordcloud_pngs/'

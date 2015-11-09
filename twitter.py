@@ -43,13 +43,9 @@ for c in candidates:
 	print ''
 
 	for tweet_data in tweet_data_list:
-
-		# tweet_data = repr(tweet_data)
-
 		tweet_text_to_end = tweet_data.partition('text=u')[2]
 		tweet_text = tweet_text_to_end.partition(', is_quote_status=')[0]
 		tweet_list_to_write.append(tweet_text)
-		
 		print tweet_text
 		print ''
 

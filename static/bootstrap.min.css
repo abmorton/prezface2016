@@ -2,6 +2,11 @@
 margin: auto;
 }*/
 
+.heading_description {
+
+	max-width: 700px;
+}
+
 .candidate_header {
 	margin: 20px 0;
 }

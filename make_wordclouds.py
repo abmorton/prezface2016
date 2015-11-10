@@ -1,6 +1,8 @@
 from wordcloud import WordCloud, STOPWORDS
 from PIL import Image
 import numpy as np
+import random
+from app import db, Candidate
 # import matplotlib.pyplot as plt
 
 # Add any stopwords here.
@@ -43,22 +45,37 @@ STOPWORDS.add('EDT')
 inpath = 'static/bw_pngs/'
 outpath = 'static/wordcloud_pngs/'
 
-# This is to generate wordclouds super-imposed on the cadidates' faces.
+# Querying candidates to get parties so we can use custom colors for different parties.
+candidates = Candidate.query.all()
 
-for c in range(1,19):
-	text = open('static/txt/'+str(c)+'.txt', 'r').read()
-	img = Image.open(inpath+str(c)+'.png')
-	img = img.resize((490,540), Image.ANTIALIAS)
-	hcmask = np.array(img)
-	wordcloud = WordCloud(background_color="white", max_font_size=23, max_words=310, mask=hcmask, prefer_horizontal=0.94, stopwords=STOPWORDS)
-	wordcloud.generate(text)
-	wordcloud.to_file(outpath+str(c)+'_wordcloud.png')
+# Color customizations
+def blue_color_func(word, font_size, position, orientation, random_state=None, **kwargs):
+    return "hsl(220, 70%%, %d%%)" % random.randint(38, 88)
+
+def red_color_func(word, font_size, position, orientation, random_state=None, **kwargs):
+    return "hsl(0, 69%%, %d%%)" % random.randint(27, 80)
+
+
+# This is to generate wordclouds super-imposed on the cadidates' faces.
+for c in candidates:
+	text = open('static/txt/'+str(c.id)+'.txt', 'r').read()
+	# img = Image.open(inpath+str(c.id)+'.png')
+	# img = img.resize((490,540), Image.ANTIALIAS)
+	# hcmask = np.array(img)
+	# wordcloud = WordCloud(background_color="white", max_font_size=23, max_words=310, mask=hcmask, prefer_horizontal=0.94, stopwords=STOPWORDS)
+	# wordcloud.generate(text)
+	# wordcloud.to_file(outpath+str(c.id)+'_wordcloud.png')
 
 # Making block word clouds (not masked).
-	# text = open('static/txt/'+c.id+'.txt', 'r').read()
 	wordcloud = WordCloud(background_color="white", margin=2, max_font_size=48, max_words=200, width=700, height=450, prefer_horizontal=1.0, stopwords=STOPWORDS)
 	wordcloud.generate(text)
-	wordcloud.to_file(outpath+str(c)+'_block_wordcloud.png')
+	if c.party == 'Republican Party':
+		print c.party
+		wordcloud.recolor(color_func=red_color_func, random_state=3)
+	elif c.party == 'Democratic Party':
+		print c.party
+		wordcloud.recolor(color_func=blue_color_func, random_state=3)
+	wordcloud.to_file(outpath+str(c.id)+'_block_wordcloud.png')
 
 
 # Make Liberty Bell / Constitution word cloud.

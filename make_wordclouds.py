@@ -28,6 +28,13 @@ STOPWORDS.add('u2019m')
 STOPWORDS.add('u2026')
 STOPWORDS.add('Q')
 STOPWORDS.add('t')
+STOPWORDS.add('nGet')
+STOPWORDS.add('ET')
+STOPWORDS.add('amp')
+STOPWORDS.add('H')
+STOPWORDS.add('s')
+STOPWORDS.add('gt')
+STOPWORDS.add('n')
 
 
 inpath = 'static/bw_pngs/'

@@ -35,7 +35,10 @@ STOPWORDS.add('H')
 STOPWORDS.add('s')
 STOPWORDS.add('gt')
 STOPWORDS.add('n')
-
+STOPWORDS.add('u200bGet')
+STOPWORDS.add('8pm')
+STOPWORDS.add('7pm')
+STOPWORDS.add('EDT')
 
 inpath = 'static/bw_pngs/'
 outpath = 'static/wordcloud_pngs/'

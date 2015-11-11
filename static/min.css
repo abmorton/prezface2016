@@ -10,13 +10,30 @@ body li {
 
 #navbar {
 	position: absolute;
-	top: 267px;
+	top: 300px;
 }
 
 #container {
 	text-align: center;
 	/*margin: 0 auto;*/
 	margin: 0 60px 0 60px;
+}
+
+img.left_star {
+	display: inline;
+	height: 25px;
+	width: 25px;
+	position: relative;
+	left: -285px;
+	top: 32px;
+}
+
+img.right_star {
+	height: 25px;
+	width: 25px;
+	position: relative;
+	left: 285px;
+	top: -30px;
 }
 
 
@@ -31,10 +48,10 @@ header {
 
 header h1 {
  	font-family: Gotham book, Arial, sans-serif;
-	/*font-weight: bold;*/
 	font-size: 30px;
 	color: #221F73;
 	margin-bottom: 0;
+	margin-top: 0;
 }
 
 header h2 {
@@ -51,7 +68,7 @@ header p {
 	color: #87898B;
 	padding-bottom: 50px;
 	min-width:200px;
-    max-width:550px;
+    max-width: 600px;
     text-align: center;
     margin:0 auto;
 }

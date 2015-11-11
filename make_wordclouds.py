@@ -67,7 +67,7 @@ for c in candidates:
 	# wordcloud.to_file(outpath+str(c.id)+'_wordcloud.png')
 
 # Making block word clouds (not masked).
-	wordcloud = WordCloud(background_color="white", margin=2, max_font_size=48, max_words=200, width=700, height=450, prefer_horizontal=1.0, stopwords=STOPWORDS)
+	wordcloud = WordCloud(background_color="white", margin=1, max_font_size=45, max_words=175, width=540, height=350, prefer_horizontal=1.0, stopwords=STOPWORDS)
 	wordcloud.generate(text)
 	if c.party == 'Republican Party':
 		print c.party

@@ -1,33 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
-
+<header>
 <h1>{{ title }}</h1>
+<h2>TWITTER WORD CLOUDS</h2>
 
-<!-- <img src="/static/wordcloud_pngs/libertybell_constitution_wordcloud.png" id="libertybell" class="wordcloud"> -->
+<p>Word clouds of the 2016 U.S. Presidential candidates based on their past 500 tweets. Colors are random, font size increases with word frequency. Each word cloud contains the 200 most frequently tweeted word by that candidate.</p>
 
-<p class="heading_description">Word clouds of the 2016 U.S. Presidential candidates based on their past 500 tweets. Colors are random, font size increases with word frequency. Each word cloud contains the 200 most frequently tweeted word by that candidate.</p>
-
-<p>Check out the <a href="https://github.com/abmorton/prezface2016">code</a> at GitHub.</p>
-
-<br>
-
+<ul id="navbar">
 	{% for c in candidates %}
-	<div class="candidate">
-		<h3 class="candidate_header">{{c.name}} - {{c.state}} - {{c.party}}</h3>
-		<img src="/static/colorjpgs/{{c.id}}.jpg">
-		<span class="candidate_links">
-		<ul>
-<!-- 			<li>Government site: <a href="{{c.government_site}}", target="_blank">{{c.government_site}}</a></li>
- -->		<li>Campaign site: <a href="{{c.campaign_site}}", target="_blank">{{c.campaign_site}}</a></li>
-			<li>Twitter site: <a href="http://twitter.com/{{c.twitter_name}}", target="_blank">{{c.twitter_name}}</a></li>
-			<li>Facebook site: <a href="{{c.facebook_site}}", target="_blank">{{c.facebook_site}}</a></li>
-		</ul>
-		</span>
-		<h5 class="candidate_wordcloud_title"><a href="http://twitter.com/{{c.twitter_name}}", target="_blank">{{c.twitter_name}}</a> word cloud:</h5>
+	<li><a href="#{{c.last_name}}">{{c.last_name.upper()}}</a></li>
+	{% endfor %}
+</ul>
+</header>
+<div id="container">
+	{% for c in candidates %}
+	<div class="candidate_section">
+		<div class="candidate">
+		{% if c.party == "Democratic Party" %}
+			<h3 class="dem">{{c.first_name.upper()}} <a name="{{c.last_name}}">{{c.last_name.upper()}}</a></h3>
+		{% endif %}
+		{% if c.party == "Republican Party" %}
+			<h3 class="rep">{{c.first_name.upper()}} <a name="{{c.last_name}}">{{c.last_name.upper()}}</a></h3>
+		{% endif %}
+			 	<h4>{{c.state}} - {{c.party}}</h4>
+			<img src="/static/colorjpgs/{{c.id}}.jpg">
+			<br>
+	 			<a href="http://{{c.campaign_site}}", target="_blank", class="candidate_links">{{c.campaign_site}}</a>
+			<ul>
+				<li><a href="http://twitter.com/{{c.twitter_name}}", target="_blank"><img src="/static/design/Twitter-Logo-Transparent.gif", class="social_media"></a></li>
+				<li><a href="{{c.facebook_site}}", target="_blank"><img src="/static/design/facebook_logo_transparent.png" class="social_media"></a></li>
+			</ul>
 		<img src="/static/wordcloud_pngs/{{c.id}}_block_wordcloud.png" class="candidate_wordcloud">
-	
-		<hr size=2>
+		</div>
 	</div>
 	{% endfor %}
-
+</div>
+<footer>
+<p>Check out the <a href="https://github.com/abmorton/prezface2016">code</a> at GitHub.</p>
+</footer>
 {% endblock %}

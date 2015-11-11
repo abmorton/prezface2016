@@ -30,8 +30,8 @@ for c in candidates:
 
 	user = api.get_user(c.twitter_name)
 
-	tweet_data = api.user_timeline(screen_name=user.screen_name, count=500, include_rts=False)
-	tweet_data = repr(tweet_data)
+	tweet_data = repr(api.user_timeline(screen_name=user.screen_name, count=400, include_rts=False))
+	# tweet_data = repr(tweet_data)
 	tweet_data_list = tweet_data.split('Status(')
 	tweet_list_to_write = []
 

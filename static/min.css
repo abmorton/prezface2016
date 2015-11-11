@@ -1,0 +1,130 @@
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body li {
+	display: inline;
+    list-style-type: none;
+}
+
+#navbar {
+	position: absolute;
+	top: 267px;
+}
+
+#container {
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+header {
+	border-top: solid #C6282E 14px;
+	margin-top: 0;
+	padding-top: 30px;
+	text-align: center !important;
+	border-bottom: solid #221F73 70px;
+
+}
+
+header h1 {
+ 	font-family: Gotham book, Arial, sans-serif;
+	/*font-weight: bold;*/
+	font-size: 30px;
+	color: #221F73;
+	margin-bottom: 0;
+}
+
+header h2 {
+
+	margin-top: 0;
+	font-family: Gotham, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	color: #C6282E;
+}
+
+header p {
+	font-size: 16px;
+	color: #87898B;
+	padding-bottom: 50px;
+	min-width:200px;
+    max-width:550px;
+    text-align: center;
+    margin:0 auto;
+}
+
+header ul {
+	min-width: 200px;
+	/*max-width: 785px;*/
+/*	text-align: center;
+	margin: auto auto;
+*/	font-weight: bold;
+	font-size: 14px;
+	/*background: #221F73;*/
+
+}
+
+header li {
+	padding: 10px;
+}
+
+header a {
+	text-decoration: none;
+	color: white;
+	font-family: 
+}
+
+header a:hover {
+	color: #C6282E;
+}
+
+.candidate {
+
+}
+
+img.social_media {
+	height: 30px;
+	width: 30px;
+}
+
+h3 {
+    font-family: Gotham, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+h3.rep {
+	color: #C6282E;
+	line-height: 5px;
+}
+
+h3.dem {
+	color: #221F73;
+}
+
+h4 {
+	color: #87898B;
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 0;
+}
+a.candidate_links {
+	color: #87898B;
+	text-decoration: none;
+}
+
+.candidate_wordcloud {
+/*	margin: 5px 0 20px 0;
+*/}
+
+.candidate_wordcloud_title {
+	/*text-align: center;*/
+}
+
+.wordcloud {
+	/*margin: 5px 0 25px 0;*/
+
+}
+

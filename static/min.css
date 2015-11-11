@@ -10,7 +10,7 @@ body li {
 
 #navbar {
 	position: absolute;
-	top: 300px;
+	top: 297px;
 }
 
 #container {
@@ -25,7 +25,7 @@ img.left_star {
 	width: 25px;
 	position: relative;
 	left: -285px;
-	top: 32px;
+	top: 33px;
 }
 
 img.right_star {
@@ -52,6 +52,7 @@ header h1 {
 	color: #221F73;
 	margin-bottom: 0;
 	margin-top: 0;
+	/*line-height: 10px;*/
 }
 
 header h2 {
@@ -61,11 +62,13 @@ header h2 {
 	font-weight: bold;
 	font-size: 30px;
 	color: #C6282E;
+	line-height: 3px;
 }
 
 header p {
 	font-size: 16px;
 	color: #87898B;
+	padding-top: 30px;
 	padding-bottom: 50px;
 	min-width:200px;
     max-width: 600px;
@@ -83,7 +86,8 @@ header ul {
 }
 
 header li {
-	padding: 10px;
+	padding: 20px;
+	line-height: 23px;
 }
 
 header a {
@@ -100,7 +104,7 @@ div.candidate_section {
 	}
 
 div.candidate_section:nth-child(odd) {
-	padding: 40px 65px;
+	padding: 40px 60px;
 
 }
 

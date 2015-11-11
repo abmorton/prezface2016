@@ -83,7 +83,7 @@ div.candidate_section {
 	}
 
 div.candidate_section:nth-child(odd) {
-	padding: 40px 80px;
+	padding: 40px 70px;
 
 }
 
@@ -98,6 +98,15 @@ div.candidate_section:nth-child(even) {
 
 div.candidate_section:nth-child(even) .candidate {
 	float: right;
+}
+
+ul.social_media {
+	position: relative;
+	left: -22px;
+}
+
+img.candidate_portrait {
+	margin-bottom: 12px;
 }
 
 img.social_media {

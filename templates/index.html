@@ -14,16 +14,16 @@
 </header>
 <div id="container">
 	{% for c in candidates %}
-	<div class="candidate_section">
+	<div class="candidate_section"><a name="{{c.last_name}}"></a>
 		<div class="candidate">
 		{% if c.party == "Democratic Party" %}
-			<h3 class="dem">{{c.first_name.upper()}} <a name="{{c.last_name}}">{{c.last_name.upper()}}</a></h3>
+			<h3 class="dem">{{c.first_name.upper()}} {{c.last_name.upper()}}</h3>
 		{% endif %}
 		{% if c.party == "Republican Party" %}
-			<h3 class="rep">{{c.first_name.upper()}} <a name="{{c.last_name}}">{{c.last_name.upper()}}</a></h3>
+			<h3 class="rep">{{c.first_name.upper()}} {{c.last_name.upper()}}</h3>
 		{% endif %}
 			 	<h4>{{c.state}} - {{c.party}}</h4>
-			<img src="/static/colorjpgs/{{c.id}}.jpg">
+			<img src="/static/colorjpgs/{{c.id}}.jpg", class="candidate_portrait">
 			<br>
 	 			<a href="http://{{c.campaign_site}}", target="_blank", class="candidate_links">{{c.campaign_site}}</a>
 			<ul class="social_media">

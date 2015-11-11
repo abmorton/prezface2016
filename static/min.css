@@ -15,7 +15,8 @@ body li {
 
 #container {
 	text-align: center;
-	margin: 0 auto;
+	/*margin: 0 auto;*/
+	margin: 0 60px 0 60px;
 }
 
 
@@ -58,9 +59,7 @@ header p {
 header ul {
 	min-width: 200px;
 	/*max-width: 785px;*/
-/*	text-align: center;
-	margin: auto auto;
-*/	font-weight: bold;
+	font-weight: bold;
 	font-size: 14px;
 	/*background: #221F73;*/
 
@@ -84,7 +83,7 @@ div.candidate_section {
 	}
 
 div.candidate_section:nth-child(odd) {
-	padding: 40px 100px;
+	padding: 40px 80px;
 
 }
 
@@ -93,7 +92,7 @@ div.candidate_section:nth-child(odd) .candidate {
 }
 
 div.candidate_section:nth-child(even) {
-	padding: 40px 100px;
+	padding: 40px 80px;
 	background: #F1F2F2;
 }
 

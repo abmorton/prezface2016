@@ -104,7 +104,7 @@ div.candidate_section {
 	}
 
 div.candidate_section:nth-child(odd) {
-	padding: 40px 60px;
+	padding: 40px;
 
 }
 
@@ -152,7 +152,7 @@ h3.dem {
 
 h4 {
 	color: #87898B;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: normal;
 	margin-top: 0;
 }

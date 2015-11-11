@@ -1,6 +1,8 @@
 body {    
     margin: 0 !important;
     padding: 0 !important;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
 }
 
 body li {
@@ -10,7 +12,7 @@ body li {
 
 #navbar {
 	position: absolute;
-	top: 297px;
+	top: 273px;
 }
 
 #container {
@@ -24,16 +26,16 @@ img.left_star {
 	height: 25px;
 	width: 25px;
 	position: relative;
-	left: -285px;
-	top: 33px;
+	left: -320px;
+	top: 20px;
 }
 
 img.right_star {
 	height: 25px;
 	width: 25px;
 	position: relative;
-	left: 285px;
-	top: -30px;
+	left: 310px;
+	top: -18px;
 }
 
 
@@ -47,22 +49,26 @@ header {
 }
 
 header h1 {
- 	font-family: Gotham book, Arial, sans-serif;
-	font-size: 30px;
+ 	font-size: 30px;
 	color: #221F73;
 	margin-bottom: 0;
 	margin-top: 0;
-	/*line-height: 10px;*/
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	letter-spacing: 5px;
+	line-height: 8px;
 }
 
 header h2 {
-
 	margin-top: 0;
-	font-family: Gotham, Arial, sans-serif;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 32px;
 	color: #C6282E;
-	line-height: 3px;
+	line-height: 1px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+	letter-spacing: 4px;
+
 }
 
 header p {
@@ -74,6 +80,8 @@ header p {
     max-width: 600px;
     text-align: center;
     margin:0 auto;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
 }
 
 header ul {
@@ -182,7 +190,7 @@ footer {
 	background: #C6282E;
 	color: white;
 	padding: 14px;
-	margin: 0;
+	margin-top: 35px;
 	border: 0;
 }
 

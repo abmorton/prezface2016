@@ -41,6 +41,10 @@ STOPWORDS.add('u200bGet')
 STOPWORDS.add('8pm')
 STOPWORDS.add('7pm')
 STOPWORDS.add('EDT')
+STOPWORDS.add('nClick')
+STOPWORDS.add('Click')
+
+
 
 inpath = 'static/bw_pngs/'
 outpath = 'static/wordcloud_pngs/'

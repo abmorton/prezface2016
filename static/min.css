@@ -124,6 +124,7 @@ div.candidate_section:nth-child(even) .candidate {
 ul.social_media {
 	position: relative;
 	left: -22px;
+	top: -12px;
 }
 
 img.candidate_portrait {
@@ -144,10 +145,13 @@ h3 {
 h3.rep {
 	color: #C6282E;
 	line-height: 5px;
+	margin-bottom: 12px;
 }
 
 h3.dem {
 	color: #221F73;
+	line-height: 5px;
+	margin-bottom: 12px;
 }
 
 h4 {

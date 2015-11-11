@@ -46,7 +46,8 @@ inpath = 'static/bw_pngs/'
 outpath = 'static/wordcloud_pngs/'
 
 # Querying candidates to get parties so we can use custom colors for different parties.
-candidates = Candidate.query.all()
+# candidates = Candidate.query.all()
+candidates = Candidate.query.order_by(Candidate.last_name).all()
 
 # Color customizations
 def blue_color_func(word, font_size, position, orientation, random_state=None, **kwargs):
@@ -56,9 +57,13 @@ def red_color_func(word, font_size, position, orientation, random_state=None, **
     return "hsl(0, 69%%, %d%%)" % random.randint(27, 80)
 
 
-# This is to generate wordclouds super-imposed on the cadidates' faces.
+# This is to make backgrounds appropriate colors
+index = 1
+
 for c in candidates:
 	text = open('static/txt/'+str(c.id)+'.txt', 'r').read()
+	# This is to generate wordclouds super-imposed on the cadidates' faces.
+
 	# img = Image.open(inpath+str(c.id)+'.png')
 	# img = img.resize((490,540), Image.ANTIALIAS)
 	# hcmask = np.array(img)
@@ -67,7 +72,11 @@ for c in candidates:
 	# wordcloud.to_file(outpath+str(c.id)+'_wordcloud.png')
 
 # Making block word clouds (not masked).
-	wordcloud = WordCloud(background_color="white", margin=1, max_font_size=45, max_words=175, width=550, height=350, prefer_horizontal=1.0, stopwords=STOPWORDS)
+	if index%2 != 0:
+		background_color = "white"
+	else:
+		background_color = "#F1F2F2"
+	wordcloud = WordCloud(background_color=background_color, margin=1, max_font_size=45, max_words=175, width=550, height=350, prefer_horizontal=1.0, stopwords=STOPWORDS)
 	wordcloud.generate(text)
 	if c.party == 'Republican Party':
 		print c.party
@@ -76,6 +85,7 @@ for c in candidates:
 		print c.party
 		wordcloud.recolor(color_func=blue_color_func, random_state=3)
 	wordcloud.to_file(outpath+str(c.id)+'_block_wordcloud.png')
+	index += 1
 
 
 # Make Liberty Bell / Constitution word cloud.

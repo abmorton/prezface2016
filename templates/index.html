@@ -26,16 +26,17 @@
 			<img src="/static/colorjpgs/{{c.id}}.jpg">
 			<br>
 	 			<a href="http://{{c.campaign_site}}", target="_blank", class="candidate_links">{{c.campaign_site}}</a>
-			<ul>
+			<ul class="social_media">
 				<li><a href="http://twitter.com/{{c.twitter_name}}", target="_blank"><img src="/static/design/Twitter-Logo-Transparent.gif", class="social_media"></a></li>
 				<li><a href="{{c.facebook_site}}", target="_blank"><img src="/static/design/facebook_logo_transparent.png" class="social_media"></a></li>
 			</ul>
-		<img src="/static/wordcloud_pngs/{{c.id}}_block_wordcloud.png" class="candidate_wordcloud">
 		</div>
+		<img src="/static/wordcloud_pngs/{{c.id}}_block_wordcloud.png" class="candidate_wordcloud">
 	</div>
 	{% endfor %}
 </div>
 <footer>
 <p>Check out the <a href="https://github.com/abmorton/prezface2016">code</a> at GitHub.</p>
+<p>About the <a href="http://adambrucemorton.com" target="_blank">author</a></p>
 </footer>
 {% endblock %}

@@ -9,8 +9,8 @@ db.create_all()
  # about the candidates.
 
 hillaryclinton = Candidate('Hillary', 'Clinton', 'New York', 'Democratic Party', 'hillaryclinton.com', 'http://www.facebook.com/hillaryclinton', 'HillaryClinton')
-martinomalley = Candidate("Martin", "O'Malley", "Maryland", "Democratic Party", "www.martinomalley.com", "http://www.facebook.com/MartinOMalley", "GovernorOMalley")
-berniesanders = Candidate("Bernie", "Sanders", "Vermont", "Democratic Party", "www.berniesanders.com", "http://www.facebook.com/berniesanders", "SenSanders")
+martinomalley = Candidate("Martin", "O'Malley", "Maryland", "Democratic Party", "martinomalley.com", "http://www.facebook.com/MartinOMalley", "GovernorOMalley")
+berniesanders = Candidate("Bernie", "Sanders", "Vermont", "Democratic Party", "berniesanders.com", "http://www.facebook.com/berniesanders", "SenSanders")
 jebbush = Candidate("Jeb", "Bush", "Florida", "Republican Party", "jeb2016.com", "http://www.facebook.com/jebbush", "JebBush")
 bencarson = Candidate("Ben", "Carson", "Florida", "Republican Party", "bencarson.com", "http://www.facebook.com/DrBenjaminCarson", "RealBenCarson")
 chrischristie = Candidate("Chris", "Christie", "New Jersey", "Republican Party", "ChrisChristie.com", "http://www.facebook.com/GovChrisChristie", "GovChristie")

@@ -15,23 +15,25 @@
 <div id="container">
 	{% for c in candidates %}
 	<div class="candidate_section"><a name="{{c.last_name}}"></a>
-		<div class="candidate">
-		{% if c.party == "Democratic Party" %}
-			<h3 class="dem">{{c.first_name.upper()}} {{c.last_name.upper()}}</h3>
-		{% endif %}
-		{% if c.party == "Republican Party" %}
-			<h3 class="rep">{{c.first_name.upper()}} {{c.last_name.upper()}}</h3>
-		{% endif %}
-			 	<h4>{{c.state}} - {{c.party}}</h4>
-			<img src="/static/colorjpgs/{{c.id}}.jpg", class="candidate_portrait">
-			<br>
-	 			<a href="http://{{c.campaign_site}}", target="_blank", class="candidate_links">{{c.campaign_site}}</a>
-			<ul class="social_media">
-				<li><a href="http://twitter.com/{{c.twitter_name}}", target="_blank"><img src="/static/design/Twitter-Logo-Transparent.gif", class="social_media"></a></li>
-				<li><a href="{{c.facebook_site}}", target="_blank"><img src="/static/design/facebook_logo_transparent.png" class="social_media"></a></li>
-			</ul>
+		<div class="candidate_section_block">
+			<div class="candidate">
+			{% if c.party == "Democratic Party" %}
+				<h3 class="dem">{{c.first_name.upper()}} {{c.last_name.upper()}}</h3>
+			{% endif %}
+			{% if c.party == "Republican Party" %}
+				<h3 class="rep">{{c.first_name.upper()}} {{c.last_name.upper()}}</h3>
+			{% endif %}
+				 	<h4>{{c.state}} - {{c.party}}</h4>
+				<img src="/static/colorjpgs/{{c.id}}.jpg", class="candidate_portrait">
+				<br>
+		 			<a href="http://{{c.campaign_site}}", target="_blank", class="candidate_links">{{c.campaign_site}}</a>
+				<ul class="social_media">
+					<li><a href="http://twitter.com/{{c.twitter_name}}", target="_blank"><img src="/static/design/Twitter-Logo-Transparent.gif", class="social_media"></a></li>
+					<li><a href="{{c.facebook_site}}", target="_blank"><img src="/static/design/facebook_logo_transparent.png" class="social_media"></a></li>
+				</ul>
+			</div>
+			<img src="/static/wordcloud_pngs/{{c.id}}_block_wordcloud.png" class="candidate_wordcloud">
 		</div>
-		<img src="/static/wordcloud_pngs/{{c.id}}_block_wordcloud.png" class="candidate_wordcloud">
 	</div>
 	{% endfor %}
 </div>

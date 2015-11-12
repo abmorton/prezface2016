@@ -138,6 +138,7 @@ ul.social_media {
 }
 
 img.candidate_portrait {
+	border: solid white 8px;
 	margin-bottom: 12px;
 }
 

@@ -147,16 +147,14 @@ img.social_media {
 
 h3.rep {
 	color: #C6282E;
-	line-height: 5px;
-	margin-bottom: 12px;
+	margin-bottom: 0;
 	font-size: 21px;
 	font-weight: 700;
 }
 
 h3.dem {
 	color: #221F73;
-	line-height: 5px;
-	margin-bottom: 12px;
+	margin-bottom: 0;
 	font-size: 21px;
 	font-weight: 700;
 

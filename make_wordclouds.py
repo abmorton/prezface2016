@@ -80,7 +80,7 @@ for c in candidates:
 		background_color = "white"
 	else:
 		background_color = "#F1F2F2"
-	wordcloud = WordCloud(background_color=background_color, margin=1, max_font_size=45, max_words=175, width=500, height=330, prefer_horizontal=1.0, stopwords=STOPWORDS)
+	wordcloud = WordCloud(background_color=background_color, margin=1, max_font_size=45, max_words=175, width=480, height=320, prefer_horizontal=1.0, stopwords=STOPWORDS)
 	wordcloud.generate(text)
 	if c.party == 'Republican Party':
 		print c.party

@@ -29,7 +29,7 @@ img.left_star {
 }
 
 img.right_star {
-	display: inline;
+	display: inline-block;
 	text-align: right;
 	margin-left: 7px;
 
@@ -114,19 +114,20 @@ div.candidate_section {
 
 div.candidate_section:nth-child(odd) {
 	padding: 40px;
-
 }
 
 div.candidate_section:nth-child(odd) .candidate {
+	display: inline-block;
 	float: left;
 }
 
 div.candidate_section:nth-child(even) {
-	padding: 40px 80px;
+	padding: 40px;
 	background: #F1F2F2;
 }
 
 div.candidate_section:nth-child(even) .candidate {
+	display: inline-block;
 	float: right;
 }
 

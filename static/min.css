@@ -108,12 +108,14 @@ div.candidate_section:nth-child(odd) {
 
 div.candidate_section:nth-child(odd) .candidate_section_block {
 	display: inline-block;
+	max-width: 100%;
+	margin-top: 18px;
 }
 
 div.candidate_section:nth-child(odd) .candidate {
 	display: inline-block;
 	float: left;
-	margin: 35px;
+	margin: 0 28px;
 }
 
 div.candidate_section:nth-child(even) {
@@ -123,12 +125,14 @@ div.candidate_section:nth-child(even) {
 
 div.candidate_section:nth-child(even) .candidate_section_block {
 	display: inline-block;
+	max-width: 100%;
+	margin-top: 18px;
 }
 
 div.candidate_section:nth-child(even) .candidate {
 	display: inline-block;
 	float: right;
-	margin: 30px;
+	margin: 0 28px;
 }
 
 ul.social_media {
@@ -139,12 +143,14 @@ ul.social_media {
 
 img.candidate_portrait {
 	border: solid white 8px;
+	max-width: 100%;
 	margin-bottom: 12px;
 }
 
 img.candidate_wordcloud {
-	padding: 15px;
-	margin-top: 18px;
+	/*padding: 15px;*/
+	/*margin-top: 18px;*/
+	max-width: 100%;
 }
 
 img.social_media {
